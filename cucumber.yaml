@@ -1,0 +1,15 @@
+default: -p html -p bdd -p progress -p producao -p chrome -p cucumber
+
+html: -f html -o log/report.html
+bdd: -f pretty
+progress: --format progress
+producao: AMBIENTE=producao
+homologa: AMBIENTE=homologacao
+devel: AMBIENTE=desenvolvimento
+teste: AMBIENTE=teste
+docker: AMBIENTE=docker
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+internet_explorer: BROWSER=internet_explorer
+firefox: BROWSER=firefox
+cucumber: features/specs/faz-login-facebook.feature
